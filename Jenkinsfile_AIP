@@ -38,7 +38,9 @@ stage_name='dev3'
 uri='http://pwwsftapp01/executionmanager/api'
 username='devopsengineering@signetjewelers.com'
 }
+script {
 def propfile = readProperties(file: './project.properties')
+}
 /*
 propfile = readProperties(file: './project.properties')
 if (propfile['feature_deploy'] == "true" ) {
