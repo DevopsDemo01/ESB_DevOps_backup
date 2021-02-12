@@ -35,8 +35,8 @@ ESB_BIN_PATH='/opt/mule/bin/esb_service'
 ESB_WAR_FOLDERS='PaymentESB ESBAuditLog OrderReconESB FraudESB TaxESB FulfillmentESB AlertESB ESBAutomatedQueueRetry'
 RequestID=779
 stage_name=dev3
-uri=http://pwwsftapp01/executionmanager/api
-username=devopsengineering@signetjewelers.com
+uri='http://pwwsftapp01/executionmanager/api'
+username='devopsengineering@signetjewelers.com'
 }
 
 propfile = readProperties(file: './project.properties')
