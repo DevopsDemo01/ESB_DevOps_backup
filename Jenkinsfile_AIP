@@ -38,12 +38,13 @@ stage_name='dev3'
 uri='http://pwwsftapp01/executionmanager/api'
 username='devopsengineering@signetjewelers.com'
 }
-   
-load "project_properties.groovy"
 
 
-
-
+script {
+    load "./project.properties"
+    echo "${feature_deploy}"
+    echo "${servers}"
+}
 /*
 propfile = readProperties(file: './project.properties')
 if (propfile['feature_deploy'] == "true" ) {
@@ -122,8 +123,8 @@ stages {
 		steps {
 			container('gradle') {
 				script {
-				propfile = readProperties(file: './project.properties')
-					if (propfile['feature_deploy'] == "true" || env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'release') {
+				//propfile = readProperties(file: './project.properties')
+					if (['feature_deploy'] == "true" || env.BRANCH_NAME == 'dev' || env.BRANCH_NAME == 'release') {
 						withMaven(maven: 'MAVEN-3.6.3') {
 							//for HOSTNAME in ${HOSTS} ; do
 							//$DEPOYMENT_SERVER=$HOSTNAME
