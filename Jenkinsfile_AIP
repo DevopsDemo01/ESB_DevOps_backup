@@ -1,4 +1,4 @@
-def propfile
+//def propfile
 
 pipeline {
      
@@ -38,6 +38,11 @@ stage_name='dev3'
 uri='http://pwwsftapp01/executionmanager/api'
 username='devopsengineering@signetjewelers.com'
 }
+   
+load "project_properties.groovy"
+echo "${servers}"
+
+
 
 /*
 propfile = readProperties(file: './project.properties')
