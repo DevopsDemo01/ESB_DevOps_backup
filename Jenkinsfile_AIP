@@ -40,7 +40,7 @@ username='devopsengineering@signetjewelers.com'
 }
    
 load "project_properties.groovy"
-echo "${servers}"
+echo $servers
 
 
 
